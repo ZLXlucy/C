@@ -1,0 +1,32 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
+void delSubstr(char str[]);
+int main()
+{
+ int n;
+ char str[100];
+ scanf("%s",&str);
+ delSubstr(str);
+ return 0;
+}
+void delSubstr(char str[])
+{
+int start,substring,t;
+ scanf("%d %d",&start,&substring);
+ start--;
+ substring--;
+ for(t=0;t<strlen(str);t++)
+ {
+ if (t!=start)
+ {
+ printf("%c",str[t]);
+ }
+ else{
+ for(;substring>0;substring--)
+ {
+ t++;
+ }
+ }
+}
+}
